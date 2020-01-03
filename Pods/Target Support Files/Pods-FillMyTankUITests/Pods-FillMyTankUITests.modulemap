@@ -1,0 +1,6 @@
+framework module Pods_FillMyTankUITests {
+  umbrella header "Pods-FillMyTankUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
