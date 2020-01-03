@@ -3,19 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090007ADB3A7871B9F3EDFDB /* Pods_FillMyTankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5AD7F4B199273FEE663DC3 /* Pods_FillMyTankUITests.framework */; };
+		2240474523BEADA80087EDA0 /* TrackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240474423BEADA80087EDA0 /* TrackListController.swift */; };
 		2263B22523B65DF60069DACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22423B65DF60069DACC /* AppDelegate.swift */; };
 		2263B22723B65DF60069DACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22623B65DF60069DACC /* SceneDelegate.swift */; };
-		2263B22923B65DF60069DACC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22823B65DF60069DACC /* FirstViewController.swift */; };
-		2263B22B23B65DF60069DACC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22A23B65DF60069DACC /* SecondViewController.swift */; };
+		2263B22923B65DF60069DACC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22823B65DF60069DACC /* ViewController.swift */; };
 		2263B22E23B65DF60069DACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2263B22C23B65DF60069DACC /* Main.storyboard */; };
 		2263B23023B65DF70069DACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2263B22F23B65DF70069DACC /* Assets.xcassets */; };
 		2263B23323B65DF70069DACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2263B23123B65DF70069DACC /* LaunchScreen.storyboard */; };
 		2263B23E23B65DF70069DACC /* FillMyTankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B23D23B65DF70069DACC /* FillMyTankTests.swift */; };
 		2263B24923B65DF70069DACC /* FillMyTankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B24823B65DF70069DACC /* FillMyTankUITests.swift */; };
+		2274E2D323BA59E8006339F8 /* PricesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274E2D223BA59E8006339F8 /* PricesController.swift */; };
+		2274E2D523BA5A9D006339F8 /* PricesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274E2D423BA5A9D006339F8 /* PricesListTableViewCell.swift */; };
+		2274E2D723BA5AC1006339F8 /* PricesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274E2D623BA5AC1006339F8 /* PricesListModel.swift */; };
+		22A35E4323B7EBD20080BF2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A35E4223B7EBD20080BF2C /* GoogleService-Info.plist */; };
+		22A35E4423B7EBD20080BF2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A35E4223B7EBD20080BF2C /* GoogleService-Info.plist */; };
+		22A35E4523B7EBD20080BF2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A35E4223B7EBD20080BF2C /* GoogleService-Info.plist */; };
+		22ADACE023BA111B00DBD190 /* PricesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ADACDF23BA111B00DBD190 /* PricesCell.swift */; };
+		22ADACE223BA127300DBD190 /* DailyPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ADACE123BA127300DBD190 /* DailyPrice.swift */; };
+		44963D250F05C5D92BC4C3EB /* Pods_FillMyTank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58672D4272A1305C942E9D4 /* Pods_FillMyTank.framework */; };
+		944DC79B0BD7DA86EE2EFC3C /* Pods_FillMyTankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EDA8F08A2168F718B24E73 /* Pods_FillMyTankTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12EDA8F08A2168F718B24E73 /* Pods_FillMyTankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FillMyTankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2240474423BEADA80087EDA0 /* TrackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListController.swift; sourceTree = "<group>"; };
 		2263B22123B65DF60069DACC /* FillMyTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillMyTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2263B22423B65DF60069DACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2263B22623B65DF60069DACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2263B22823B65DF60069DACC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2263B22A23B65DF60069DACC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2263B22823B65DF60069DACC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2263B22D23B65DF60069DACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2263B22F23B65DF70069DACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2263B23223B65DF70069DACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +63,20 @@
 		2263B24423B65DF70069DACC /* FillMyTankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FillMyTankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2263B24823B65DF70069DACC /* FillMyTankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillMyTankUITests.swift; sourceTree = "<group>"; };
 		2263B24A23B65DF70069DACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2274E2D223BA59E8006339F8 /* PricesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesController.swift; sourceTree = "<group>"; };
+		2274E2D423BA5A9D006339F8 /* PricesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesListTableViewCell.swift; sourceTree = "<group>"; };
+		2274E2D623BA5AC1006339F8 /* PricesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesListModel.swift; sourceTree = "<group>"; };
+		22A35E4223B7EBD20080BF2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		22ADACDF23BA111B00DBD190 /* PricesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesCell.swift; sourceTree = "<group>"; };
+		22ADACE123BA127300DBD190 /* DailyPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPrice.swift; sourceTree = "<group>"; };
+		235130AD4B14E2690DB09486 /* Pods-FillMyTankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankTests.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTankTests/Pods-FillMyTankTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7113E248B9FFA1204ACF20F5 /* Pods-FillMyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTank.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTank/Pods-FillMyTank.debug.xcconfig"; sourceTree = "<group>"; };
+		A3F40F1196A868F62A6115A5 /* Pods-FillMyTankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankUITests.release.xcconfig"; path = "Target Support Files/Pods-FillMyTankUITests/Pods-FillMyTankUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC5AD7F4B199273FEE663DC3 /* Pods_FillMyTankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FillMyTankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1466721F4137E6BF33B61AA /* Pods-FillMyTankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankTests.release.xcconfig"; path = "Target Support Files/Pods-FillMyTankTests/Pods-FillMyTankTests.release.xcconfig"; sourceTree = "<group>"; };
+		B43AED7E7534F6AA178C933E /* Pods-FillMyTank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTank.release.xcconfig"; path = "Target Support Files/Pods-FillMyTank/Pods-FillMyTank.release.xcconfig"; sourceTree = "<group>"; };
+		C58672D4272A1305C942E9D4 /* Pods_FillMyTank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FillMyTank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4675903923FE699A7FD722 /* Pods-FillMyTankUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankUITests.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTankUITests/Pods-FillMyTankUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44963D250F05C5D92BC4C3EB /* Pods_FillMyTank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944DC79B0BD7DA86EE2EFC3C /* Pods_FillMyTankTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090007ADB3A7871B9F3EDFDB /* Pods_FillMyTankUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +114,8 @@
 				2263B23C23B65DF70069DACC /* FillMyTankTests */,
 				2263B24723B65DF70069DACC /* FillMyTankUITests */,
 				2263B22223B65DF60069DACC /* Products */,
+				DE795037DF1A2C54B0810F28 /* Pods */,
+				4B541BDA9ADB4D2A307D32F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +132,20 @@
 		2263B22323B65DF60069DACC /* FillMyTank */ = {
 			isa = PBXGroup;
 			children = (
+				22A35E4223B7EBD20080BF2C /* GoogleService-Info.plist */,
 				2263B22423B65DF60069DACC /* AppDelegate.swift */,
 				2263B22623B65DF60069DACC /* SceneDelegate.swift */,
-				2263B22823B65DF60069DACC /* FirstViewController.swift */,
-				2263B22A23B65DF60069DACC /* SecondViewController.swift */,
+				2263B22823B65DF60069DACC /* ViewController.swift */,
 				2263B22C23B65DF60069DACC /* Main.storyboard */,
 				2263B22F23B65DF70069DACC /* Assets.xcassets */,
 				2263B23123B65DF70069DACC /* LaunchScreen.storyboard */,
 				2263B23423B65DF70069DACC /* Info.plist */,
+				22ADACDF23BA111B00DBD190 /* PricesCell.swift */,
+				22ADACE123BA127300DBD190 /* DailyPrice.swift */,
+				2274E2D223BA59E8006339F8 /* PricesController.swift */,
+				2274E2D423BA5A9D006339F8 /* PricesListTableViewCell.swift */,
+				2274E2D623BA5AC1006339F8 /* PricesListModel.swift */,
+				2240474423BEADA80087EDA0 /* TrackListController.swift */,
 			);
 			path = FillMyTank;
 			sourceTree = "<group>";
@@ -131,6 +168,29 @@
 			path = FillMyTankUITests;
 			sourceTree = "<group>";
 		};
+		4B541BDA9ADB4D2A307D32F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C58672D4272A1305C942E9D4 /* Pods_FillMyTank.framework */,
+				12EDA8F08A2168F718B24E73 /* Pods_FillMyTankTests.framework */,
+				AC5AD7F4B199273FEE663DC3 /* Pods_FillMyTankUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE795037DF1A2C54B0810F28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7113E248B9FFA1204ACF20F5 /* Pods-FillMyTank.debug.xcconfig */,
+				B43AED7E7534F6AA178C933E /* Pods-FillMyTank.release.xcconfig */,
+				235130AD4B14E2690DB09486 /* Pods-FillMyTankTests.debug.xcconfig */,
+				B1466721F4137E6BF33B61AA /* Pods-FillMyTankTests.release.xcconfig */,
+				DA4675903923FE699A7FD722 /* Pods-FillMyTankUITests.debug.xcconfig */,
+				A3F40F1196A868F62A6115A5 /* Pods-FillMyTankUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2263B24D23B65DF70069DACC /* Build configuration list for PBXNativeTarget "FillMyTank" */;
 			buildPhases = (
+				C7C32BC3E4E101961790DC9A /* [CP] Check Pods Manifest.lock */,
 				2263B21D23B65DF60069DACC /* Sources */,
 				2263B21E23B65DF60069DACC /* Frameworks */,
 				2263B21F23B65DF60069DACC /* Resources */,
+				2400AAFE9A759AE5C4376B36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2263B25023B65DF70069DACC /* Build configuration list for PBXNativeTarget "FillMyTankTests" */;
 			buildPhases = (
+				21421C39F0A640889AF5EB5C /* [CP] Check Pods Manifest.lock */,
 				2263B23523B65DF70069DACC /* Sources */,
 				2263B23623B65DF70069DACC /* Frameworks */,
 				2263B23723B65DF70069DACC /* Resources */,
@@ -173,6 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2263B25323B65DF70069DACC /* Build configuration list for PBXNativeTarget "FillMyTankUITests" */;
 			buildPhases = (
+				5B66BE7352F0F33F7687F5C2 /* [CP] Check Pods Manifest.lock */,
 				2263B24023B65DF70069DACC /* Sources */,
 				2263B24123B65DF70069DACC /* Frameworks */,
 				2263B24223B65DF70069DACC /* Resources */,
@@ -236,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2263B23323B65DF70069DACC /* LaunchScreen.storyboard in Resources */,
+				22A35E4323B7EBD20080BF2C /* GoogleService-Info.plist in Resources */,
 				2263B23023B65DF70069DACC /* Assets.xcassets in Resources */,
 				2263B22E23B65DF60069DACC /* Main.storyboard in Resources */,
 			);
@@ -245,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A35E4423B7EBD20080BF2C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,20 +318,112 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A35E4523B7EBD20080BF2C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21421C39F0A640889AF5EB5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FillMyTankTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2400AAFE9A759AE5C4376B36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FillMyTank/Pods-FillMyTank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FillMyTank/Pods-FillMyTank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FillMyTank/Pods-FillMyTank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B66BE7352F0F33F7687F5C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FillMyTankUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C32BC3E4E101961790DC9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FillMyTank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2263B21D23B65DF60069DACC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2263B22B23B65DF60069DACC /* SecondViewController.swift in Sources */,
-				2263B22923B65DF60069DACC /* FirstViewController.swift in Sources */,
+				2263B22923B65DF60069DACC /* ViewController.swift in Sources */,
+				22ADACE023BA111B00DBD190 /* PricesCell.swift in Sources */,
 				2263B22523B65DF60069DACC /* AppDelegate.swift in Sources */,
+				2274E2D723BA5AC1006339F8 /* PricesListModel.swift in Sources */,
+				2274E2D323BA59E8006339F8 /* PricesController.swift in Sources */,
+				2240474523BEADA80087EDA0 /* TrackListController.swift in Sources */,
+				22ADACE223BA127300DBD190 /* DailyPrice.swift in Sources */,
 				2263B22723B65DF60069DACC /* SceneDelegate.swift in Sources */,
+				2274E2D523BA5A9D006339F8 /* PricesListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +594,7 @@
 		};
 		2263B24E23B65DF70069DACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7113E248B9FFA1204ACF20F5 /* Pods-FillMyTank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +612,7 @@
 		};
 		2263B24F23B65DF70069DACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43AED7E7534F6AA178C933E /* Pods-FillMyTank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +630,7 @@
 		};
 		2263B25123B65DF70069DACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 235130AD4B14E2690DB09486 /* Pods-FillMyTankTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +652,7 @@
 		};
 		2263B25223B65DF70069DACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1466721F4137E6BF33B61AA /* Pods-FillMyTankTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +674,7 @@
 		};
 		2263B25423B65DF70069DACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA4675903923FE699A7FD722 /* Pods-FillMyTankUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +694,7 @@
 		};
 		2263B25523B65DF70069DACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3F40F1196A868F62A6115A5 /* Pods-FillMyTankUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
