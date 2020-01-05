@@ -10,6 +10,7 @@ import UIKit
 
 class TrackListController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var ImagePreview: UIImageView!
     @IBOutlet weak var textFieldPicker: UITextField!
     private var datePicker: UIDatePicker?
     
@@ -48,6 +49,12 @@ class TrackListController : UIViewController, UIImagePickerControllerDelegate, U
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let  pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        ImagePreview.contentMode = .scaleToFill
+        ImagePreview.image = pickedImage
     }
     
 }

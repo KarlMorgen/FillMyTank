@@ -55,10 +55,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4qf-cz-yCS">
-                                <rect key="frame" x="10" y="98" width="394" height="220"/>
+                                <rect key="frame" x="10" y="98" width="394" height="705"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" id="qoa-mb-kqy">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioY-Fe-XCh">
@@ -117,11 +117,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" id="c1G-zF-Qkd">
-                                        <rect key="frame" x="0.0" y="180" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="162" width="394" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByG-oz-wao">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qAd-ZR-1KS"/>
                                                 </constraints>
@@ -130,7 +130,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZb-ef-bm2">
-                                                <rect key="frame" x="74" y="0.0" width="320" height="40"/>
+                                                <rect key="frame" x="74" y="0.0" width="320" height="30"/>
                                                 <state key="normal" title="Take a picture"/>
                                                 <connections>
                                                     <action selector="takePhoto:" destination="sXn-zx-5p0" eventType="touchUpInside" id="xC0-nU-WSZ"/>
@@ -138,6 +138,14 @@
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="ytj-ww-IMY"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OZH-8a-ygc">
+                                        <rect key="frame" x="0.0" y="230" width="394" height="475"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DNt-64-XpP">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="475"/>
+                                            </imageView>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -157,6 +165,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ImagePreview" destination="DNt-64-XpP" id="ZLx-PC-Zog"/>
                         <outlet property="textFieldPicker" destination="bXv-Tv-U6i" id="MLs-9d-OEa"/>
                     </connections>
                 </viewController>
