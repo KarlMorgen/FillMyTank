@@ -8,8 +8,12 @@
 
 import UIKit
 
-class TrackListController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddTrackController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var ImageData: NSData!
+    
+    @IBOutlet weak var kmsField: UITextField!
+    @IBOutlet weak var litersField: UITextField!
     @IBOutlet weak var ImagePreview: UIImageView!
     @IBOutlet weak var textFieldPicker: UITextField!
     private var datePicker: UIDatePicker?
@@ -18,11 +22,11 @@ class TrackListController : UIViewController, UIImagePickerControllerDelegate, U
         super.viewDidLoad()
      datePicker = UIDatePicker()
     datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(TrackListController.dateChanged(datePicker:)), for: .valueChanged)
+        datePicker?.addTarget(self, action: #selector(AddTrackController.dateChanged(datePicker:)), for: .valueChanged)
 
         textFieldPicker.inputView = datePicker
 
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TrackListController.viewTapped(gestureRecogniser:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddTrackController.viewTapped(gestureRecogniser:)))
         view.addGestureRecognizer(tapGesture)
     }
 
@@ -54,7 +58,27 @@ class TrackListController : UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let  pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         ImagePreview.contentMode = .scaleToFill
+        
+        //Showing the picture in the ImageView
+        
         ImagePreview.image = pickedImage
+        
+        //Encoding the Image to save
+        
+        ImageData = pickedImage!.pngData()! as NSData
+    }
+    
+    
+    @IBAction func saveItem(_ sender: Any) {
+        let item = TrackItem(context: PersistenceService.context)
+        item.kms = kmsField!.text!
+        item.liters = litersField!.text!
+        item.date = textFieldPicker!.text!
+        item.image = ImageData
+        
+        print ("I'm here")
+        
+        
     }
     
 }

@@ -49,7 +49,7 @@
         <!--AddTrack-->
         <scene sceneID="0Ui-9b-1wI">
             <objects>
-                <viewController title="AddTrack" id="sXn-zx-5p0" customClass="TrackListController" customModule="FillMyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AddTrack" id="sXn-zx-5p0" customClass="AddTrackController" customModule="FillMyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rad-Ln-2tP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,10 +162,15 @@
                     <navigationItem key="navigationItem" title="Add a new track" id="Iz4-o4-LH7">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Wuv-Jd-K01">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveItem:" destination="sXn-zx-5p0" id="g22-GN-QQG"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ImagePreview" destination="DNt-64-XpP" id="ZLx-PC-Zog"/>
+                        <outlet property="kmsField" destination="aNn-Az-Zo4" id="jvz-BQ-9oj"/>
+                        <outlet property="litersField" destination="84X-Bu-2hj" id="wJv-Se-ZA9"/>
                         <outlet property="textFieldPicker" destination="bXv-Tv-U6i" id="MLs-9d-OEa"/>
                     </connections>
                 </viewController>
