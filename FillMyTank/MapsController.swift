@@ -52,6 +52,7 @@ class MapsController : UIViewController {
         case .authorizedWhenInUse:
             maps.showsUserLocation = true
             centerViewOnUserLocation()
+            locationManager.startUpdatingLocation()
         case .denied:
             break
         case .notDetermined:
@@ -68,10 +69,13 @@ class MapsController : UIViewController {
 extension MapsController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //Something here    }
+        guard let location = locations.last else {return}
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        maps.setRegion(region, animated: true)
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        //something here
+        checkLocationAuthorization()
     }
     
 }
