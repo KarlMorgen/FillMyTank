@@ -77,12 +77,8 @@ class MapsController : UIViewController {
         if let annotation = annotationView.annotation {
             if annotation is MKUserLocation {
 
-                var region = MKCoordinateRegion()
-                region.center = self.maps.userLocation.coordinate
-                region.span.latitudeDelta = 0.025
-                region.span.longitudeDelta = 0.025
                 
-                self.maps.setRegion(region, animated: true)
+                centerViewOnUserLocation()
                 
                 populateNearByPlaces()
 
@@ -105,7 +101,7 @@ class MapsController : UIViewController {
         region.center = CLLocationCoordinate2D(latitude: self.maps.userLocation.coordinate.latitude, longitude: self.maps.userLocation.coordinate.longitude)
         
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = "Gas Stations"
+        request.naturalLanguageQuery = "Coffee"
         request.region = region
         
         let search = MKLocalSearch(request: request)
@@ -117,7 +113,8 @@ class MapsController : UIViewController {
             
             for item in response.mapItems {
                 
-                print(item.placemark)
+                print("I'm here")
+                print(item)
                 
                 let annotation = PlaceAnnotation()
                 annotation.coordinate = item.placemark.coordinate
