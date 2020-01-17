@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0484965523D1FCC2001D6B05 /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484965423D1FCC2001D6B05 /* MapsController.swift */; };
 		090007ADB3A7871B9F3EDFDB /* Pods_FillMyTankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5AD7F4B199273FEE663DC3 /* Pods_FillMyTankUITests.framework */; };
 		2240474523BEADA80087EDA0 /* AddTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240474423BEADA80087EDA0 /* AddTrackController.swift */; };
 		2263B22523B65DF60069DACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22423B65DF60069DACC /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0484965423D1FCC2001D6B05 /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
 		12EDA8F08A2168F718B24E73 /* Pods_FillMyTankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FillMyTankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2240474423BEADA80087EDA0 /* AddTrackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackController.swift; sourceTree = "<group>"; };
 		2263B22123B65DF60069DACC /* FillMyTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillMyTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				2240474423BEADA80087EDA0 /* AddTrackController.swift */,
 				2268EA9923C74511009F2F9C /* TrackItemsList.xcdatamodeld */,
 				2268EA9C23C74615009F2F9C /* PersistenceService.swift */,
+				0484965423D1FCC2001D6B05 /* MapsController.swift */,
 			);
 			path = FillMyTank;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				2268EA9B23C74511009F2F9C /* TrackItemsList.xcdatamodeld in Sources */,
 				2274E2D323BA59E8006339F8 /* PricesController.swift in Sources */,
 				2240474523BEADA80087EDA0 /* AddTrackController.swift in Sources */,
+				0484965523D1FCC2001D6B05 /* MapsController.swift in Sources */,
 				22ADACE223BA127300DBD190 /* DailyPrice.swift in Sources */,
 				2263B22723B65DF60069DACC /* SceneDelegate.swift in Sources */,
 				2274E2D523BA5A9D006339F8 /* PricesListTableViewCell.swift in Sources */,
@@ -607,6 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FillMyTank/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,6 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FillMyTank/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -643,8 +649,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKG49WM5TV;
 				INFOPLIST_FILE = FillMyTankTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,8 +672,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKG49WM5TV;
 				INFOPLIST_FILE = FillMyTankTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -686,7 +694,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKG49WM5TV;
 				INFOPLIST_FILE = FillMyTankUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -706,7 +716,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKG49WM5TV;
 				INFOPLIST_FILE = FillMyTankUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
