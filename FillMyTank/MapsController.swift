@@ -10,9 +10,15 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol MapsControllerDelegate : class {
+    
+    func mapsViewControllerDidSelectAnnotation(mapItem :MKMapItem)
+}
+
 class MapsController : UIViewController {
     
     @IBOutlet weak var maps: MKMapView!
+    weak var delegate :MapsControllerDelegate!
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 1000
     
@@ -61,6 +67,70 @@ class MapsController : UIViewController {
             break
         case .authorizedAlways:
             break
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        
+        let annotationView = views.first!
+        
+        if let annotation = annotationView.annotation {
+            if annotation is MKUserLocation {
+
+                var region = MKCoordinateRegion()
+                region.center = self.maps.userLocation.coordinate
+                region.span.latitudeDelta = 0.025
+                region.span.longitudeDelta = 0.025
+                
+                self.maps.setRegion(region, animated: true)
+                
+                populateNearByPlaces()
+
+            }
+        }
+        
+    }
+    
+    
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        let annotation = view.annotation as! PlaceAnnotation
+        self.delegate.mapsViewControllerDidSelectAnnotation(mapItem: annotation.mapItem)
+    }
+    
+    func populateNearByPlaces(){
+        
+        var region = MKCoordinateRegion()
+        region.center = CLLocationCoordinate2D(latitude: self.maps.userLocation.coordinate.latitude, longitude: self.maps.userLocation.coordinate.longitude)
+        
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = "Gas Stations"
+        request.region = region
+        
+        let search = MKLocalSearch(request: request)
+        search.start { (response, error) in
+            
+            guard let response = response else {
+                return
+            }
+            
+            for item in response.mapItems {
+                
+                print(item.placemark)
+                
+                let annotation = PlaceAnnotation()
+                annotation.coordinate = item.placemark.coordinate
+                annotation.title = item.name
+                annotation.mapItem = item
+                
+                DispatchQueue.main.async {
+                    self.maps.addAnnotation(annotation)
+                }
+                
+                
+            }
+            
         }
     }
     
