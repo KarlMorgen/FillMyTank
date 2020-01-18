@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FillMyTank/TrackItem+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:FillMyTank.xcodeproj">
    </FileRef>
    <FileRef

@@ -16,7 +16,7 @@ class TrackListController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fetchRequest: NSFetchRequest<TrackItem> = TrackItem.fetchRequest()
+        let fetchRequest: NSFetchRequest<TrackItem> = NSFetchRequest<TrackItem>(entityName: "TrackItem")
         do{
           let TrackList = try PersistenceService.context.fetch(fetchRequest)
             self.TrackList = TrackList

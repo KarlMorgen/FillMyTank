@@ -30,6 +30,12 @@
 		22ADACE223BA127300DBD190 /* DailyPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ADACE123BA127300DBD190 /* DailyPrice.swift */; };
 		22DA967F23D283F100A8E387 /* TrackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA967E23D283F100A8E387 /* TrackListController.swift */; };
 		22DA968223D2886B00A8E387 /* TrackModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22DA968023D2886B00A8E387 /* TrackModel.xcdatamodeld */; };
+		22E04C7A23D331B9000E9446 /* TrackItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E04C7823D331B9000E9446 /* TrackItem+CoreDataClass.swift */; };
+		22E04C7B23D331B9000E9446 /* TrackItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E04C7823D331B9000E9446 /* TrackItem+CoreDataClass.swift */; };
+		22E04C7C23D331B9000E9446 /* TrackItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E04C7823D331B9000E9446 /* TrackItem+CoreDataClass.swift */; };
+		22E04C7D23D331B9000E9446 /* TrackItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E04C7923D331B9000E9446 /* TrackItem+CoreDataProperties.swift */; };
+		22E04C7E23D331B9000E9446 /* TrackItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E04C7923D331B9000E9446 /* TrackItem+CoreDataProperties.swift */; };
+		22E04C7F23D331B9000E9446 /* TrackItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E04C7923D331B9000E9446 /* TrackItem+CoreDataProperties.swift */; };
 		22E4251C23D3226D00BF0682 /* TrackListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4251B23D3226D00BF0682 /* TrackListTableViewCell.swift */; };
 		44963D250F05C5D92BC4C3EB /* Pods_FillMyTank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58672D4272A1305C942E9D4 /* Pods_FillMyTank.framework */; };
 		944DC79B0BD7DA86EE2EFC3C /* Pods_FillMyTankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EDA8F08A2168F718B24E73 /* Pods_FillMyTankTests.framework */; };
@@ -80,6 +86,8 @@
 		22ADACE123BA127300DBD190 /* DailyPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPrice.swift; sourceTree = "<group>"; };
 		22DA967E23D283F100A8E387 /* TrackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListController.swift; sourceTree = "<group>"; };
 		22DA968123D2886B00A8E387 /* TrackModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackModel.xcdatamodel; sourceTree = "<group>"; };
+		22E04C7823D331B9000E9446 /* TrackItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrackItem+CoreDataClass.swift"; path = "../TrackItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		22E04C7923D331B9000E9446 /* TrackItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrackItem+CoreDataProperties.swift"; path = "../TrackItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		22E4251B23D3226D00BF0682 /* TrackListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewCell.swift; sourceTree = "<group>"; };
 		235130AD4B14E2690DB09486 /* Pods-FillMyTankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankTests.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTankTests/Pods-FillMyTankTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7113E248B9FFA1204ACF20F5 /* Pods-FillMyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTank.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTank/Pods-FillMyTank.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +152,8 @@
 		2263B22323B65DF60069DACC /* FillMyTank */ = {
 			isa = PBXGroup;
 			children = (
+				22E04C7823D331B9000E9446 /* TrackItem+CoreDataClass.swift */,
+				22E04C7923D331B9000E9446 /* TrackItem+CoreDataProperties.swift */,
 				22A35E4223B7EBD20080BF2C /* GoogleService-Info.plist */,
 				2263B22423B65DF60069DACC /* AppDelegate.swift */,
 				2263B22623B65DF60069DACC /* SceneDelegate.swift */,
@@ -436,7 +446,9 @@
 				2263B22923B65DF60069DACC /* ViewController.swift in Sources */,
 				22ADACE023BA111B00DBD190 /* PricesCell.swift in Sources */,
 				2263B22523B65DF60069DACC /* AppDelegate.swift in Sources */,
+				22E04C7D23D331B9000E9446 /* TrackItem+CoreDataProperties.swift in Sources */,
 				22DA968223D2886B00A8E387 /* TrackModel.xcdatamodeld in Sources */,
+				22E04C7A23D331B9000E9446 /* TrackItem+CoreDataClass.swift in Sources */,
 				2268EA9D23C74615009F2F9C /* PersistenceService.swift in Sources */,
 				22DA967F23D283F100A8E387 /* TrackListController.swift in Sources */,
 				0443071E23D2365B000FA285 /* PlaceAnnotation.swift in Sources */,
@@ -455,7 +467,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E04C7B23D331B9000E9446 /* TrackItem+CoreDataClass.swift in Sources */,
 				2263B23E23B65DF70069DACC /* FillMyTankTests.swift in Sources */,
+				22E04C7E23D331B9000E9446 /* TrackItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +477,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E04C7C23D331B9000E9446 /* TrackItem+CoreDataClass.swift in Sources */,
 				2263B24923B65DF70069DACC /* FillMyTankUITests.swift in Sources */,
+				22E04C7F23D331B9000E9446 /* TrackItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

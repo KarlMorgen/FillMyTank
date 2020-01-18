@@ -13,4 +13,8 @@ import CoreData
 @objc(TrackItem)
 public class TrackItem: NSManagedObject {
 
+    @NSManaged public var date: String?
+    @NSManaged public var kms: Int32
+    @NSManaged public var liters: Float
+
 }

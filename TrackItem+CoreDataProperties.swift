@@ -17,8 +17,8 @@ extension TrackItem {
         return NSFetchRequest<TrackItem>(entityName: "TrackItem")
     }
 
-    @NSManaged public var date: String?
-    @NSManaged public var kms: Int32
-    @NSManaged public var liters: Float
+//    @NSManaged public var date: String?
+//    @NSManaged public var kms: Int32
+//    @NSManaged public var liters: Float
 
 }
