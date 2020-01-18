@@ -35,8 +35,8 @@ extension TrackListController : UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrackListTableViewCell
         
         
-        cell.kmsLabel?.text = String(TrackList[indexPath.row].kms)
-        cell.litersLabel?.text = String(TrackList[indexPath.row].liters)
+        cell.kmsLabel?.text = String(TrackList[indexPath.row].kms) + " Km"
+        cell.litersLabel?.text = String(TrackList[indexPath.row].liters) + " L"
         cell.dateLabel?.text = String(TrackList[indexPath.row].date ?? "NO Date Added")
         return cell
     }
