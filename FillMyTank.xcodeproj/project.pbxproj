@@ -30,6 +30,7 @@
 		22ADACE223BA127300DBD190 /* DailyPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ADACE123BA127300DBD190 /* DailyPrice.swift */; };
 		22DA967F23D283F100A8E387 /* TrackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA967E23D283F100A8E387 /* TrackListController.swift */; };
 		22DA968223D2886B00A8E387 /* TrackModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22DA968023D2886B00A8E387 /* TrackModel.xcdatamodeld */; };
+		22E4251C23D3226D00BF0682 /* TrackListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4251B23D3226D00BF0682 /* TrackListTableViewCell.swift */; };
 		44963D250F05C5D92BC4C3EB /* Pods_FillMyTank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58672D4272A1305C942E9D4 /* Pods_FillMyTank.framework */; };
 		944DC79B0BD7DA86EE2EFC3C /* Pods_FillMyTankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EDA8F08A2168F718B24E73 /* Pods_FillMyTankTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		22ADACE123BA127300DBD190 /* DailyPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPrice.swift; sourceTree = "<group>"; };
 		22DA967E23D283F100A8E387 /* TrackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListController.swift; sourceTree = "<group>"; };
 		22DA968123D2886B00A8E387 /* TrackModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackModel.xcdatamodel; sourceTree = "<group>"; };
+		22E4251B23D3226D00BF0682 /* TrackListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewCell.swift; sourceTree = "<group>"; };
 		235130AD4B14E2690DB09486 /* Pods-FillMyTankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankTests.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTankTests/Pods-FillMyTankTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7113E248B9FFA1204ACF20F5 /* Pods-FillMyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTank.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTank/Pods-FillMyTank.debug.xcconfig"; sourceTree = "<group>"; };
 		A3F40F1196A868F62A6115A5 /* Pods-FillMyTankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankUITests.release.xcconfig"; path = "Target Support Files/Pods-FillMyTankUITests/Pods-FillMyTankUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				0443071D23D2365B000FA285 /* PlaceAnnotation.swift */,
 				22DA967E23D283F100A8E387 /* TrackListController.swift */,
 				22DA968023D2886B00A8E387 /* TrackModel.xcdatamodeld */,
+				22E4251B23D3226D00BF0682 /* TrackListTableViewCell.swift */,
 			);
 			path = FillMyTank;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				22ADACE223BA127300DBD190 /* DailyPrice.swift in Sources */,
 				2263B22723B65DF60069DACC /* SceneDelegate.swift in Sources */,
 				2274E2D523BA5A9D006339F8 /* PricesListTableViewCell.swift in Sources */,
+				22E4251C23D3226D00BF0682 /* TrackListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

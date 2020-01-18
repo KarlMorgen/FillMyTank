@@ -30,10 +30,14 @@ class TrackListController : UIViewController {
 
 extension TrackListController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.kmsLabel?.text = String(TrackItem[indexPath.row].kms)
-        cell.litersLabel?.text = String(TrackItem[indexPath.row].liter)
-        cell.dateLabel?.text = String(TrackItem[indexPath.row].date)
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrackListTableViewCell
+        
+        
+        cell.kmsLabel?.text = String(TrackList[indexPath.row].kms)
+        cell.litersLabel?.text = String(TrackList[indexPath.row].liters)
+        cell.dateLabel?.text = String(TrackList[indexPath.row].date ?? "NO Date Added")
         return cell
     }
     
