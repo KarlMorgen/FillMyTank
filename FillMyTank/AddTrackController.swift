@@ -47,6 +47,14 @@ class AddTrackController : UIViewController, UIImagePickerControllerDelegate, UI
     
 
     
+    @IBAction func AddTrack(_ sender: Any) {
+        
+        let Trackitem = TrackItem(context: PersistenceService.context)
+        Trackitem.kms = Int32(kmsField!.text!)!
+        Trackitem.liters = Float(litersField!.text!)!
+        Trackitem.date = textFieldPicker!.text!
+        PersistenceService.saveContext()
+    }
     
     
 }
