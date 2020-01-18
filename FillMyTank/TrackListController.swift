@@ -41,15 +41,22 @@ class TrackListController : UIViewController {
                datePicker?.addTarget(self, action: #selector(TrackListController.dateChanged(datePicker:)), for: .valueChanged)
 
         textFieldPicker?.inputView = datePicker!
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        textFieldPicker?.text = dateFormatter.string(from: datePicker!.date)
 
                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TrackListController.viewTapped(gestureRecogniser:)))
                view.addGestureRecognizer(tapGesture)
         
         kmsField?.placeholder = "Enter your current KM"
         kmsField?.keyboardType = .numberPad
+        litersField?.placeholder = "Enter How many liters"
+        litersField?.keyboardType = .numberPad
+        textFieldPicker?.placeholder = "Click to pick a date"
     }
     
-    func viewWillAppear(){
+    func viewDidAppear(){
         GetData()
     }
     
@@ -78,7 +85,8 @@ class TrackListController : UIViewController {
         item.liters = Float(litersField!.text!)!
         item.date = textFieldPicker!.text!
         PersistenceService.saveContext()
-        navigationController?.popViewController(animated: true)
+        //navigationController?.popToRootViewController(animated: true)
+        self.performSegue(withIdentifier: "Saved", sender: self)
         self.TrackList.append(item)
         self.tableView?.reloadData()
     }
