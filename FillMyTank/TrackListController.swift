@@ -33,8 +33,7 @@ class TrackListController : UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         GetData()
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
@@ -56,9 +55,6 @@ class TrackListController : UIViewController {
         textFieldPicker?.placeholder = "Click to pick a date"
     }
     
-    func viewDidAppear(){
-        GetData()
-    }
     
     
     @objc func viewTapped (gestureRecogniser: UITapGestureRecognizer){
@@ -85,10 +81,9 @@ class TrackListController : UIViewController {
         item.liters = Float(litersField!.text!)!
         item.date = textFieldPicker!.text!
         PersistenceService.saveContext()
-        //navigationController?.popToRootViewController(animated: true)
-        self.performSegue(withIdentifier: "Saved", sender: self)
         self.TrackList.append(item)
-        self.tableView?.reloadData()
+        GetData()
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -112,6 +107,24 @@ extension TrackListController : UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            
+            let alert = UIAlertController(title: "Delete", message: "Are you sure you want to delete this?", preferredStyle: .alert)
+            let deleteAction = UIAlertAction(title: "Yes", style: .default ) {(action) in
+                self.TrackList.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .right)
+                
+            }
+            let cancelAction = UIAlertAction(title: "No", style: .default, handler: nil)
+            alert.addAction(deleteAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+            
+        }
+    }
+    
     
     
 }
