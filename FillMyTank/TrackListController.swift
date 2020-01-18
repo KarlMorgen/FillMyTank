@@ -20,6 +20,8 @@ class TrackListController : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var datePicker: UIDatePicker?
     
+    
+    
     var TrackList = [TrackItem]()
     
     func GetData(){
@@ -88,6 +90,8 @@ class TrackListController : UIViewController {
 }
 
 extension TrackListController : UITableViewDataSource{
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
@@ -113,9 +117,12 @@ extension TrackListController : UITableViewDataSource{
             
             let alert = UIAlertController(title: "Delete", message: "Are you sure you want to delete this?", preferredStyle: .alert)
             let deleteAction = UIAlertAction(title: "Yes", style: .default ) {(action) in
+                let DeleteItem = self.TrackList[indexPath.row]
                 self.TrackList.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .right)
                 
+                PersistenceService.context.delete(DeleteItem)
+                PersistenceService.saveContext()
             }
             let cancelAction = UIAlertAction(title: "No", style: .default, handler: nil)
             alert.addAction(deleteAction)
