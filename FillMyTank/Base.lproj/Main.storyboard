@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Tf-wj-ALe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Tf-wj-ALe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,11 +40,26 @@
         <!--TrackList-->
         <scene sceneID="Hz0-Fe-Te7">
             <objects>
-                <viewController title="TrackList" id="mmS-VJ-td4" sceneMemberID="viewController">
+                <viewController title="TrackList" id="mmS-VJ-td4" customClass="TrackListController" customModule="FillMyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JNa-By-PZp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFC-dK-MTt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mmS-VJ-td4" id="lhA-vn-AfK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BFC-dK-MTt" firstAttribute="top" secondItem="f5P-MN-jnT" secondAttribute="top" id="iKX-UB-ddN"/>
+                            <constraint firstItem="BFC-dK-MTt" firstAttribute="bottom" secondItem="f5P-MN-jnT" secondAttribute="bottom" id="qID-Hu-88G"/>
+                            <constraint firstItem="BFC-dK-MTt" firstAttribute="trailing" secondItem="f5P-MN-jnT" secondAttribute="trailing" id="xGw-e8-FOz"/>
+                            <constraint firstItem="BFC-dK-MTt" firstAttribute="leading" secondItem="f5P-MN-jnT" secondAttribute="leading" id="z4C-N6-qaj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="f5P-MN-jnT"/>
                     </view>
                     <navigationItem key="navigationItem" title="My List" id="S2I-AA-i6g">
@@ -55,6 +70,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="BFC-dK-MTt" id="21u-jz-0Gg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdJ-0N-09i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,11 +82,11 @@
         <scene sceneID="0Ui-9b-1wI">
             <objects>
                 <viewController title="AddTrack" id="sXn-zx-5p0" customClass="AddTrackController" customModule="FillMyTank" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rad-Ln-2tP">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rad-Ln-2tP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4qf-cz-yCS">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4qf-cz-yCS">
                                 <rect key="frame" x="10" y="98" width="394" height="705"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" id="qoa-mb-kqy">
@@ -112,10 +130,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-i3-cBt">
-                                        <rect key="frame" x="0.0" y="120" width="394" height="40"/>
+                                        <rect key="frame" x="0.0" y="120" width="394" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQO-07-tyw">
-                                                <rect key="frame" x="0.0" y="0.0" width="36" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Z3q-Dy-sCs"/>
                                                 </constraints>
@@ -124,40 +142,22 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXv-Tv-U6i">
-                                                <rect key="frame" x="56" y="0.0" width="338" height="40"/>
+                                                <rect key="frame" x="56" y="0.0" width="338" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" id="c1G-zF-Qkd">
-                                        <rect key="frame" x="0.0" y="162" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="162" width="394" height="523"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByG-oz-wao">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="qAd-ZR-1KS"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZb-ef-bm2">
-                                                <rect key="frame" x="74" y="0.0" width="320" height="30"/>
-                                                <state key="normal" title="Take a picture"/>
-                                                <connections>
-                                                    <action selector="takePhoto:" destination="sXn-zx-5p0" eventType="touchUpInside" id="xC0-nU-WSZ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                         <viewLayoutGuide key="safeArea" id="ytj-ww-IMY"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OZH-8a-ygc">
-                                        <rect key="frame" x="0.0" y="230" width="394" height="475"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OZH-8a-ygc">
+                                        <rect key="frame" x="0.0" y="703.5" width="394" height="1.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DNt-64-XpP">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="475"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNt-64-XpP">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="1.5"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -429,10 +429,10 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="64" height="48"/>
-        <image name="dollarsign.circle.fill" catalog="system" width="64" height="62"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="64" height="60"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="logo" width="511" height="512"/>
-        <image name="map" catalog="system" width="64" height="58"/>
-        <image name="plus.circle.fill" catalog="system" width="64" height="62"/>
+        <image name="map" catalog="system" width="64" height="56"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

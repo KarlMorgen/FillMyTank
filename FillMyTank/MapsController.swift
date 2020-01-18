@@ -30,7 +30,7 @@ class MapsController : UIViewController {
     }
     
     func setupLocationManager(){
-        locationManager.delegate = self
+        locationManager.delegate = self as! CLLocationManagerDelegate
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
@@ -38,6 +38,8 @@ class MapsController : UIViewController {
         if let location = locationManager.location?.coordinate{
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             maps.setRegion(region, animated: true)
+            
+            
         }
     }
     
@@ -97,8 +99,10 @@ class MapsController : UIViewController {
     
     func populateNearByPlaces(){
         
-        var region = MKCoordinateRegion()
-        region.center = CLLocationCoordinate2D(latitude: self.maps.userLocation.coordinate.latitude, longitude: self.maps.userLocation.coordinate.longitude)
+        print("Im heeeeeerrrrreeeeeee")
+        if let location = locationManager.location?.coordinate{
+        let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        
         
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = "Coffee"
@@ -132,7 +136,7 @@ class MapsController : UIViewController {
     }
     
 }
-
+}
 extension MapsController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -147,3 +151,4 @@ extension MapsController: CLLocationManagerDelegate {
     
 }
 }
+

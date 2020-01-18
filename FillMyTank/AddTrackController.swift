@@ -45,40 +45,8 @@ class AddTrackController : UIViewController, UIImagePickerControllerDelegate, UI
 
     }
     
-    @IBAction func takePhoto(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let  pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        ImagePreview.contentMode = .scaleToFill
-        
-        //Showing the picture in the ImageView
-        
-        ImagePreview.image = pickedImage
-        
-        //Encoding the Image to save
-        
-        ImageData = pickedImage!.pngData()! as NSData
-    }
+
     
     
-    @IBAction func saveItem(_ sender: Any) {
-        let item = TrackItem(context: PersistenceService.context)
-        item.kms = kmsField!.text!
-        item.liters = litersField!.text!
-        item.date = textFieldPicker!.text!
-        item.image = ImageData
-        
-        print ("I'm here")
-        
-        
-    }
     
 }

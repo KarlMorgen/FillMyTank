@@ -2,7 +2,7 @@
 //  TrackItem+CoreDataProperties.swift
 //  
 //
-//  Created by user161495 on 1/9/20.
+//  Created by user161495 on 1/18/20.
 //
 //
 
@@ -16,9 +16,8 @@ extension TrackItem {
         return NSFetchRequest<TrackItem>(entityName: "TrackItem")
     }
 
-    @NSManaged public var kms: String?
-    @NSManaged public var liters: String?
+    @NSManaged public var kms: Int32
+    @NSManaged public var liters: Float
     @NSManaged public var date: String?
-    @NSManaged public var image: NSObject?
 
 }
