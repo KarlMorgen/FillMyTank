@@ -10,7 +10,6 @@
 		0443071E23D2365B000FA285 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443071D23D2365B000FA285 /* PlaceAnnotation.swift */; };
 		0484965523D1FCC2001D6B05 /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484965423D1FCC2001D6B05 /* MapsController.swift */; };
 		090007ADB3A7871B9F3EDFDB /* Pods_FillMyTankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5AD7F4B199273FEE663DC3 /* Pods_FillMyTankUITests.framework */; };
-		2240474523BEADA80087EDA0 /* AddTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240474423BEADA80087EDA0 /* AddTrackController.swift */; };
 		2263B22523B65DF60069DACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22423B65DF60069DACC /* AppDelegate.swift */; };
 		2263B22723B65DF60069DACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22623B65DF60069DACC /* SceneDelegate.swift */; };
 		2263B22923B65DF60069DACC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2263B22823B65DF60069DACC /* ViewController.swift */; };
@@ -62,7 +61,6 @@
 		0443071D23D2365B000FA285 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		0484965423D1FCC2001D6B05 /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
 		12EDA8F08A2168F718B24E73 /* Pods_FillMyTankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FillMyTankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2240474423BEADA80087EDA0 /* AddTrackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackController.swift; sourceTree = "<group>"; };
 		2263B22123B65DF60069DACC /* FillMyTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillMyTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2263B22423B65DF60069DACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2263B22623B65DF60069DACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				2274E2D223BA59E8006339F8 /* PricesController.swift */,
 				2274E2D423BA5A9D006339F8 /* PricesListTableViewCell.swift */,
 				2274E2D623BA5AC1006339F8 /* PricesListModel.swift */,
-				2240474423BEADA80087EDA0 /* AddTrackController.swift */,
 				2268EA9C23C74615009F2F9C /* PersistenceService.swift */,
 				0484965423D1FCC2001D6B05 /* MapsController.swift */,
 				0443071D23D2365B000FA285 /* PlaceAnnotation.swift */,
@@ -454,7 +451,6 @@
 				0443071E23D2365B000FA285 /* PlaceAnnotation.swift in Sources */,
 				2274E2D723BA5AC1006339F8 /* PricesListModel.swift in Sources */,
 				2274E2D323BA59E8006339F8 /* PricesController.swift in Sources */,
-				2240474523BEADA80087EDA0 /* AddTrackController.swift in Sources */,
 				0484965523D1FCC2001D6B05 /* MapsController.swift in Sources */,
 				22ADACE223BA127300DBD190 /* DailyPrice.swift in Sources */,
 				2263B22723B65DF60069DACC /* SceneDelegate.swift in Sources */,
