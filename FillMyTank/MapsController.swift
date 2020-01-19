@@ -74,11 +74,11 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
     
     
     func mapView(_ maps: MKMapView, didAdd views: [MKAnnotationView]){
-        print("Im here outside")
+        //print("Im here outside")
         let annotationView = views.first
         if let annotation = annotationView?.annotation{
             if annotation is MKUserLocation{
-                print("Im here inside")
+                //print("Im here inside")
                 centerViewOnUserLocation()
                 findStations()
             }
@@ -140,33 +140,13 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
 
 }
     
-//    func mapView(maps : MKMapView, didSelect view : MKAnnotationView){
-//
-//        guard let annotation = view.annotation else {
-//            return
-//        }
-//
-//        let directionRequest = MKDirections.Request()
-//        directionRequest.source = MKMapItem.forCurrentLocation()
-//        directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: annotation.coordinate))
-//        directionRequest.transportType = .automobile
-//        let directions = MKDirections(request: directionRequest)
-//
-//        directions.calculate {
-//            (response, error) -> Void in
-//            guard let response = response else {
-//                if let error = error {
-//                    print("Error: \(error)")
-//                }
-//                return
-//            }
-//
-//            if !response.routes.isEmpty {
-//                let route = response.routes[0]
-//                DispatchQueue.main.async { [weak self] in
-//                    self?.maps.addOverlay(route.polyline)
-//                }
-//            }
-//        }
-//    }
+    func mapView(_ maps : MKMapView, didSelect view : MKAnnotationView){
+        print("I'm selectedddd")
+        let latitude = view.annotation?.coordinate.latitude
+        let longitude = view.annotation?.coordinate.longitude
+        let coordinate = CLLocationCoordinate2DMake(latitude!,longitude!)
+                             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+                                mapItem.name = view.annotation?.title!
+                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+    }
 }
