@@ -30,7 +30,7 @@ class MapsController : UIViewController {
     }
     
     func setupLocationManager(){
-        locationManager.delegate = self as! CLLocationManagerDelegate
+        locationManager.delegate = self as CLLocationManagerDelegate
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
@@ -38,6 +38,7 @@ class MapsController : UIViewController {
         if let location = locationManager.location?.coordinate{
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             maps.setRegion(region, animated: true)
+            print("Im in centerView", region)
             
             
         }
@@ -72,70 +73,7 @@ class MapsController : UIViewController {
         }
     }
     
-    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        
-        let annotationView = views.first!
-        
-        if let annotation = annotationView.annotation {
-            if annotation is MKUserLocation {
 
-                
-                centerViewOnUserLocation()
-                
-                populateNearByPlaces()
-
-            }
-        }
-        
-    }
-    
-    
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
-        let annotation = view.annotation as! PlaceAnnotation
-        self.delegate.mapsViewControllerDidSelectAnnotation(mapItem: annotation.mapItem)
-    }
-    
-    func populateNearByPlaces(){
-        
-        print("Im heeeeeerrrrreeeeeee")
-        if let location = locationManager.location?.coordinate{
-        let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        
-        
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = "Coffee"
-        request.region = region
-        
-        let search = MKLocalSearch(request: request)
-        search.start { (response, error) in
-            
-            guard let response = response else {
-                return
-            }
-            
-            for item in response.mapItems {
-                
-                print("I'm here")
-                print(item)
-                
-                let annotation = PlaceAnnotation()
-                annotation.coordinate = item.placemark.coordinate
-                annotation.title = item.name
-                annotation.mapItem = item
-                
-                DispatchQueue.main.async {
-                    self.maps.addAnnotation(annotation)
-                }
-                
-                
-            }
-            
-        }
-    }
-    
-}
 }
 extension MapsController: CLLocationManagerDelegate {
     
