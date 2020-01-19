@@ -24,6 +24,7 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        maps.delegate = self
         checkLocationServices()
         locationManager.startUpdatingLocation()
         maps.showsUserLocation = true
@@ -71,12 +72,13 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
         }
     }
     
+    
     func mapView(_ maps: MKMapView, didAdd views: [MKAnnotationView]){
-        
+        print("Im here outside")
         let annotationView = views.first
         if let annotation = annotationView?.annotation{
             if annotation is MKUserLocation{
-                print("Im here")
+                print("Im here inside")
                 centerViewOnUserLocation()
                 findStations()
             }
