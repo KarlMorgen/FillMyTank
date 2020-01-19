@@ -5,7 +5,6 @@
 //  Created by marouenabdi on 17/01/2020.
 //  Copyright © 2020 MarouenAbdi. All rights reserved.
 //
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -15,17 +14,30 @@ protocol MapsControllerDelegate : class {
     func mapsViewControllerDidSelectAnnotation(mapItem :MKMapItem)
 }
 
-class MapsController : UIViewController {
+class MapsController : UIViewController,CLLocationManagerDelegate {
     
     @IBOutlet weak var maps: MKMapView!
     weak var delegate :MapsControllerDelegate!
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 1000
+    var region = MKCoordinateRegion()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
     
+        
+    }
+    
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            guard let location = locations.last else {return}
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            maps.setRegion(region, animated: true)
+        
+        func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+            checkLocationAuthorization()
+        }
         
     }
     
@@ -36,10 +48,8 @@ class MapsController : UIViewController {
     
     func centerViewOnUserLocation(){
         if let location = locationManager.location?.coordinate{
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+             region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             maps.setRegion(region, animated: true)
-            print("Im in centerView", region)
-            
             
         }
     }
@@ -62,6 +72,7 @@ class MapsController : UIViewController {
             maps.showsUserLocation = true
             centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
+            findStations()
         case .denied:
             break
         case .notDetermined:
@@ -73,20 +84,39 @@ class MapsController : UIViewController {
         }
     }
     
-
-}
-extension MapsController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {return}
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        maps.setRegion(region, animated: true)
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocationAuthorization()
+    func findStations(){
+        
+        
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = "Gas station"
+        request.region = region
+        
+        let search = MKLocalSearch(request: request)
+        search.start { (response, error) in
+            if response == nil {
+                print("ERROR")
+            }
+            else{
+                print("We have results!!!!!!!")
+                print(response!.mapItems[0])
+                for item in response!.mapItems {
+                
+                let annotation = PlaceAnnotation()
+                annotation.coordinate = item.placemark.coordinate
+                annotation.title = item.name
+                annotation.mapItem = item
+                
+                DispatchQueue.main.async {
+                    self.maps.addAnnotation(annotation)
+                }
+                
+                
+            }
+            }
+        
+        
     }
     
-}
-}
 
+}
+}
