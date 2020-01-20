@@ -1,5 +1,10 @@
 #  FillMyTank
-![FillMyTank](https://qbaxuw.db.files.1drv.com/y4mGch97AmhNNlb8iYVaUKDy-H4udrTVHj4Y2HBGATZPQpOU2vRVYFAJxOiJXrI10D5kEenj3M75zI_vvptMczedTVj8j6Mr-h2loUqXES48yz4eEWCBjzPdOE7NRmWScxH-rUGwthVtEPbzWGL4phfWzkofiPD1Eh5QHRCbtqzqFcwXfXO0-4RruECYxl6MxiFxQ8G0_HMmFKCOyaVen8m7Q?width=256&height=256&cropmode=none)
+!
+FillMy Tank is the app when you need it most. It helps you find gas station nearby.. where ever you are.. It helps you also track you fuel consumption by taking notes easily and you can check today's fuel price in different gas stations (This feature is only for Portugal). 
 
+
+# How to install 
+
+-Clone the app to your computer 
 
 
