@@ -25,7 +25,6 @@ class PricesController : UIViewController, UITableViewDelegate, UITableViewDataS
         
         priceItem = StationsList[indexPath.row]
         
-        listcell.NameLabel.text = priceItem.Name
         listcell.DieselLabel.text = priceItem.Diesel
         listcell.GasolineLabel.text = priceItem.Gasoline
         listcell.GPLLabel.text = priceItem.GPL

@@ -10,7 +10,6 @@ import UIKit
 
 class PricesListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var NameLabel: UILabel!
     
     @IBOutlet weak var DieselLabel: UILabel!
     @IBOutlet weak var GasolineLabel: UILabel!
