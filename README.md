@@ -1,6 +1,6 @@
 #  FillMyTank
 
-FillMyTank is the app when you need it most. It helps you finding gas station nearby.. where ever you are.. It helps you also track your fuel consumption by taking notes easily and you can check today's fuel prices in different gas stations (This feature is only for Portugal). 
+FillMyTank is the app when you need it most. It helps you finding gas stations nearby.. where ever you are.. It helps you also track your fuel consumption by taking notes easily and you can check today's fuel prices in different gas stations (This feature is only for Portugal). 
 
 
 <p align="center">

@@ -41,7 +41,7 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
             maps.setRegion(region, animated: true)
         
         func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-            //checkLocationAuthorization()
+            
         }
         
     }
@@ -64,14 +64,16 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
         
         if CLLocationManager.locationServicesEnabled(){
             //setup the location manager.
+            
             setupLocationManager()
-            //checkLocationAuthorization()
         }
         else{
             //Show alert let the user know how to do it.
         }
     }
     
+    
+    //Adding the annotations on the maps
     
     func mapView(_ maps: MKMapView, didAdd views: [MKAnnotationView]){
         //print("Im here outside")
@@ -87,23 +89,9 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
         
     }
     
-//    func checkLocationAuthorization(){
-//        switch CLLocationManager.authorizationStatus(){
-//        case .authorizedWhenInUse:
-//            maps.showsUserLocation = true
-////            centerViewOnUserLocation()
-////            locationManager.startUpdatingLocation()
-////            findStations()
-//        case .denied:
-//            break
-//        case .notDetermined:
-//            locationManager.requestWhenInUseAuthorization()
-//        case .restricted:
-//            break
-//        case .authorizedAlways:
-//            break
-//        }
-//    }
+    
+    
+    //Finding the gas station in region and creating their annotations
     
     func findStations(){
         
@@ -118,7 +106,6 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
                 print("ERROR")
             }
             else{
-                //print("We have results!!!!!!!")
                 for item in response!.mapItems {
                 
                 let annotation = PlaceAnnotation()
@@ -139,6 +126,8 @@ class MapsController : UIViewController,MKMapViewDelegate,CLLocationManagerDeleg
     
 
 }
+    
+    //The event when the user select an annotation
     
     func mapView(_ maps : MKMapView, didSelect view : MKAnnotationView){
         print("I'm selectedddd")

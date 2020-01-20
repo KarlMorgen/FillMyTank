@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         
-        //set the firebase reference
+        //setting the Firebase reference
         
     ref = Database.database().reference().child("T_Price")
         
@@ -74,6 +74,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
 
+    //Setting the background picture for the homepage
+    
     func setBackground(){
         view.addSubview(backgroundImageView)
         backgroundImageView.translatesAutoresizingMaskIntoConstraints = false

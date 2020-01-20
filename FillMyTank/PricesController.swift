@@ -52,7 +52,7 @@ class PricesController : UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set the firebase reference
+        //Setting up the firebase reference
         
     ref = Database.database().reference().child("Local_Base")
         

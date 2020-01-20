@@ -24,6 +24,9 @@ class TrackListController : UIViewController {
     
     var TrackList = [TrackItem]()
     
+    
+    //Fetching data from Local Storage
+    
     func GetData(){
         let fetchRequest: NSFetchRequest<TrackItem> = NSFetchRequest<TrackItem>(entityName: "TrackItem")
         do{
@@ -75,6 +78,7 @@ class TrackListController : UIViewController {
     }
     
 
+    //Adding a track item to Local Storage
     
     @IBAction func AddTrack(_ sender: Any) {
         
