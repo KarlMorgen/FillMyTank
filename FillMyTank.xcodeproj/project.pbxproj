@@ -87,6 +87,7 @@
 		22E04C7823D331B9000E9446 /* TrackItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrackItem+CoreDataClass.swift"; path = "../TrackItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		22E04C7923D331B9000E9446 /* TrackItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrackItem+CoreDataProperties.swift"; path = "../TrackItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		22E4251B23D3226D00BF0682 /* TrackListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewCell.swift; sourceTree = "<group>"; };
+		22F4EED823D5340A00F57192 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		235130AD4B14E2690DB09486 /* Pods-FillMyTankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankTests.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTankTests/Pods-FillMyTankTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7113E248B9FFA1204ACF20F5 /* Pods-FillMyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTank.debug.xcconfig"; path = "Target Support Files/Pods-FillMyTank/Pods-FillMyTank.debug.xcconfig"; sourceTree = "<group>"; };
 		A3F40F1196A868F62A6115A5 /* Pods-FillMyTankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillMyTankUITests.release.xcconfig"; path = "Target Support Files/Pods-FillMyTankUITests/Pods-FillMyTankUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		2263B21823B65DF60069DACC = {
 			isa = PBXGroup;
 			children = (
+				22F4EED823D5340A00F57192 /* README.md */,
 				2263B22323B65DF60069DACC /* FillMyTank */,
 				2263B23C23B65DF70069DACC /* FillMyTankTests */,
 				2263B24723B65DF70069DACC /* FillMyTankUITests */,

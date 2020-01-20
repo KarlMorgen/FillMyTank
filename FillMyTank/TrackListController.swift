@@ -53,7 +53,7 @@ class TrackListController : UIViewController {
         kmsField?.placeholder = "Enter your current KM"
         kmsField?.keyboardType = .numberPad
         litersField?.placeholder = "Enter How many liters"
-        litersField?.keyboardType = .numberPad
+        litersField?.keyboardType = .decimalPad
         textFieldPicker?.placeholder = "Click to pick a date"
     }
     
