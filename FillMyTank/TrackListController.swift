@@ -82,14 +82,23 @@ class TrackListController : UIViewController {
     
     @IBAction func AddTrack(_ sender: Any) {
         
-        let item = TrackItem(context: PersistenceService.context)
-        item.kms = Int32(kmsField!.text!)!
-        item.liters = Float(litersField!.text!)!
-        item.date = textFieldPicker!.text!
-        PersistenceService.saveContext()
-        self.TrackList.append(item)
-        GetData()
-        navigationController?.popViewController(animated: true)
+        if (Int32(kmsField!.text!) != nil) && (Float(litersField!.text!) != nil){
+            let item = TrackItem(context: PersistenceService.context)
+            item.kms = Int32(kmsField!.text!)!
+            item.liters = Float(litersField!.text!)!
+            item.date = textFieldPicker!.text!
+            PersistenceService.saveContext()
+            self.TrackList.append(item)
+            GetData()
+            navigationController?.popViewController(animated: true)
+            
+        }else{
+            let alert = UIAlertController(title: "Alert", message: "Please verify your data!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
     }
 }
 
