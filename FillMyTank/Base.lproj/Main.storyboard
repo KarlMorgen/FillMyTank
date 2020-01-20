@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Tf-wj-ALe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Tf-wj-ALe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -168,10 +168,10 @@
                                         <viewLayoutGuide key="safeArea" id="IbB-nK-DQs"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-jS-7Tg">
-                                        <rect key="frame" x="0.0" y="60" width="394" height="22"/>
+                                        <rect key="frame" x="0.0" y="60" width="394" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wK-Uk-zcC">
-                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Wa5-bz-0nB"/>
                                                 </constraints>
@@ -180,17 +180,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84X-Bu-2hj">
-                                                <rect key="frame" x="62.5" y="0.0" width="331.5" height="22"/>
+                                                <rect key="frame" x="62.5" y="0.0" width="331.5" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-i3-cBt">
-                                        <rect key="frame" x="0.0" y="102" width="394" height="40"/>
+                                        <rect key="frame" x="0.0" y="120" width="394" height="22"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQO-07-tyw">
-                                                <rect key="frame" x="0.0" y="0.0" width="36" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Z3q-Dy-sCs"/>
                                                 </constraints>
@@ -199,7 +199,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXv-Tv-U6i">
-                                                <rect key="frame" x="56" y="0.0" width="338" height="40"/>
+                                                <rect key="frame" x="56" y="0.0" width="338" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -260,7 +260,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztu-DE-wGA">
-                                                    <rect key="frame" x="248" y="15" width="146" height="21"/>
+                                                    <rect key="frame" x="248" y="15" width="140" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -317,8 +317,6 @@
                                                 <constraint firstItem="Ztu-DE-wGA" firstAttribute="leading" secondItem="PKU-bG-fev" secondAttribute="trailing" constant="33" id="MfO-NT-yvV"/>
                                                 <constraint firstItem="PKU-bG-fev" firstAttribute="top" secondItem="vt0-V1-CoA" secondAttribute="topMargin" constant="4" id="ReG-Xo-dc5"/>
                                                 <constraint firstItem="o2b-L3-7Mq" firstAttribute="top" secondItem="PKU-bG-fev" secondAttribute="bottom" constant="33" id="SZb-av-1DI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="DEd-lt-Kqy" secondAttribute="trailing" constant="104" id="WyW-92-QCu"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Ztu-DE-wGA" secondAttribute="trailing" constant="104" id="Xl7-OS-qSb"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="DEd-lt-Kqy" secondAttribute="bottom" constant="33" id="e0G-pU-3oV"/>
                                                 <constraint firstItem="o2b-L3-7Mq" firstAttribute="leading" secondItem="3il-5a-3Vr" secondAttribute="trailing" constant="8" id="fOE-8k-a0v"/>
                                                 <constraint firstItem="Ztu-DE-wGA" firstAttribute="top" secondItem="vt0-V1-CoA" secondAttribute="topMargin" constant="4" id="rmS-lR-7qO"/>
